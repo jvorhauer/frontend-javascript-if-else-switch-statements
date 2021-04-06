@@ -9,16 +9,22 @@ console.log('Is 2 gelijk aan 2?', equalNumbers);
 // 1. Declareer een variabele en sla daar de uitkomst van de vergelijking "Is 10 groter dan 20?" in op        // geeft false wanneer gelogd
 // ==========================================
 
+const tenMoreThanTwenty = 10 > 20;
+console.log("Is 10 groter dan 20?", tenMoreThanTwenty);
 
 // ==========================================
 // 2. Declareer een variabele en sla daar de uitkomst van de vergelijking "Is 10 ongelijk aan 11?" in op        // geeft true wanneer gelogd
 // ==========================================
 
+const tenIsNotEqualToEleven = 10 !== 11;
+console.log("Is 10 ongelijk aan 11?", tenIsNotEqualToEleven);
 
 // ==========================================
 // 3. Declareer een variabele en sla daar in op of de woorden 'zoet' en 'sappig' hetzelfde zijn                // geeft false wanneer gelogd
 // ==========================================
 
+const zoetIsEqualToSappig = "zoet" === "sappig";
+console.log("Zijn de woorden 'zoet' en 'sappig' hetzelfde?", zoetIsEqualToSappig);
 
 // ==========================================
 // 4a. Declareer een variabele en sla daar het rapportcijfer 9 in op.
@@ -26,6 +32,10 @@ console.log('Is 2 gelijk aan 2?', equalNumbers);
 //     Als dat zo is, loggen we 'Cum laude!' in de console.                                                     // geeft 'Cum laude!' wanneer gelogd
 // ==========================================
 
+const rapportCijfer = 9;
+if (rapportCijfer > 8) {
+    console.log("Cum laude!");
+}
 
 // ==========================================
 // 5a. Gebruik onderstaande variabelen isRaining en temperature;
@@ -34,5 +44,13 @@ console.log('Is 2 gelijk aan 2?', equalNumbers);
 // Tip: verander de waarde van isRaining en temperature even handmatig om te kijken of jouw 2e conditie klopt
 // ==========================================
 
-const isRaining = false;
-const temperature = 23;
+const isRaining = true;
+const temperature = 13;
+
+if (!isRaining && temperature > 21) {
+    console.log("Je kunt een korte broek aan!");
+} else if (isRaining || temperature < 12) {
+    console.log("Doe een (regen)jas aan!");
+} else {
+    console.log("Het is", temperature, "graden en het regent niet");
+}
